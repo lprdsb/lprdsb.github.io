@@ -13,24 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="lpr">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://example.com/2022/08/13/example/index.html">
+    <meta name="description" content="一不小心就颓废了3个多月，真爽，2022年了，还是得写点东西。 写的东西呢，是关于可逆反应中，物质的总量固定，该以怎样的投料比投料才能使平衡转化率最大。 之前做题的时候就错了，后来问老师才知道是结论，可是，这玩意儿没证明用起来也太不爽了。 于是，在网上到处找，终于摸清了证明的路数，在这里做个简单的证明 首先，引入一个比较经典的问题： 假设对于多元函数的约束\(f(x_1,\dots,x_n)&#x3D;0\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="813">
+<meta property="og:url" content="http://example.com/2022/08/13/8-13/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一不小心就颓废了3个多月，真爽，2022年了，还是得写点东西。 写的东西呢，是关于可逆反应中，物质的总量固定，该以怎样的投料比投料才能使平衡转化率最大。 之前做题的时候就错了，后来问老师才知道是结论，可是，这玩意儿没证明用起来也太不爽了。 于是，在网上到处找，终于摸清了证明的路数，在这里做个简单的证明 首先，引入一个比较经典的问题： 假设对于多元函数的约束\(f(x_1,\dots,x_n)&#x3D;0\">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-13T10:04:43.000Z">
-<meta property="article:modified_time" content="2022-08-13T10:39:57.153Z">
+<meta property="article:published_time" content="2022-08-13T10:50:49.000Z">
+<meta property="article:modified_time" content="2022-08-13T12:17:34.464Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="test0">
-<meta property="article:tag" content="test1">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>test - Hexo</title>
+  <title>813 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="test"></span>
+            <span id="subtitle" data-typed-text="813"></span>
           
         </div>
 
@@ -210,7 +210,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-13 18:04" pubdate>
+        <time datetime="2022-08-13 18:50" pubdate>
           2022年8月13日 晚上
         </time>
       </span>
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2.5k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 分钟
+          22 分钟
         
       </span>
     
@@ -271,12 +271,104 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">test</h1>
+            <h1 style="display: none">813</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h1
+id="一不小心就颓废了3个多月真爽2022年了还是得写点东西">一不小心就颓废了3个多月，<del>真爽</del>，2022年了，还是得写点东西。</h1>
+<p>写的东西呢，是关于可逆反应中，物质的总量固定，该以怎样的投料比投料才能使平衡转化率最大。</p>
+<p>之前做题的时候就错了，后来问老师才知道是结论，可是，这玩意儿没证明用起来也太不爽了。</p>
+<p>于是，在网上到处找，终于摸清了证明的路数，在这里做个简单的证明</p>
+<p>首先，引入一个比较经典的问题：</p>
+<p>假设对于多元函数的约束<span
+class="math inline">\(f(x_1,\dots,x_n)=0\)</span>，我们想知道<span
+class="math inline">\(x_n\)</span>的极值。</p>
+<p>就类似于圆的方程中，强行分类讨论得到<span
+class="math inline">\(y\)</span>关于<span
+class="math inline">\(x\)</span>的方程一样，假设我们强行解出<span
+class="math inline">\(x_n\)</span>的表达式： <span
+class="math display">\[
+x_n=g(x_1,\dots,x_{n-1})
+\]</span> 使得原方程恒成立，即： <span class="math display">\[
+f(x_1,\dots,g(x_1,\dots,x_{n-1}))\equiv0
+\]</span> 我们知道，想要<span
+class="math inline">\(x_n\)</span>取得极值，一个必要条件就是对于<span
+class="math inline">\(i=1\dots n-1\)</span>，<span
+class="math inline">\(\frac{\partial f}{\partial x_i}=0\)</span></p>
+<p>对<span class="math inline">\(x_n\)</span>求关于<span
+class="math inline">\(x_i\)</span>偏导，即： <span
+class="math display">\[
+\frac{\partial g}{\partial x_i}=0
+\]</span> 于是，我们能得到<span
+class="math inline">\(n-1\)</span>个方程： <span class="math display">\[
+\begin{cases}
+\frac{\partial g}{\partial x_1}=0\\
+\dots\\
+\frac{\partial g}{\partial x_{n-1}}=0\\
+\end{cases}
+\]</span> 解出来的<span class="math inline">\(x_1\dots
+x_{n-1}\)</span>即为<span
+class="math inline">\(x_n\)</span>取得极值时的取值，这玩意当然可以用来求曲线中某个变量的极值，也可以用来算圆锥曲线等二次曲线在某个点的切线斜率，当变量只有两个的时候，就是通常所说的隐函数。</p>
+<p>那么，对于这样一个可逆反应： <span class="math display">\[
+a_1A_1(g) +a_2A_2(g)+\cdots+a_nA_n(g) \rightleftharpoons b_1B_1(g)
++b_2B_2(g)\cdots+b_nB_n(g)
+\]</span> 设它的初始物质总量为<span
+class="math inline">\(S\)</span>，体积为<span
+class="math inline">\(V\)</span>，<span
+class="math inline">\(A_{i(i=1\dots n-1)}\)</span>量分数为<span
+class="math inline">\(\varphi_i\)</span>，整个方程转化的量为<span
+class="math inline">\(x\)</span>，那么有： <span class="math display">\[
+k=\frac{\displaystyle\prod_{i=1}^{m}(\frac{b_ix}{V})^{b_i}}{\displaystyle\prod_{i=1}^{n-1}(\frac{S\cdot\varphi_i-a_ix}{V})^{a_i}\cdot[\frac{S\cdot(1-\sum_{i=1}^{n-1}\varphi_i)-a_nx}{V}]^{a_n}}
+\]</span> 化简得： <span class="math display">\[
+k\cdot
+V^{\sum_i^mb_i-\sum_i^na_i}=\frac{\displaystyle\prod_{i=1}^{m}(b_ix)^{b_i}}{\displaystyle\prod_{i=1}^{n-1}(S\cdot\varphi_i-a_ix)^{a_i}\cdot[S\cdot(1-\sum_{i=1}^{n-1}\varphi_i)-a_nx]^{a_n}}
+\]</span> 那么我们定义： <span class="math display">\[
+K=k\cdot V^{\sum_i^mb_i-\sum_i^na_i}
+\]</span> 有： <span class="math display">\[
+K\cdot\displaystyle\prod_{i=1}^{n-1}(S\cdot\varphi_i-a_ix)^{a_i}\cdot[S\cdot(1-\sum_{i=1}^{n-1}\varphi_i)-a_nx]^{a_n}-\displaystyle\prod_{i=1}^{m}(b_ix)^{b_i}=0
+\]</span> 这就是关于<span
+class="math inline">\(\varphi_1\cdots\varphi_{n-1}\)</span>以及<span
+class="math inline">\(x\)</span>的约束条件，写得简单点，就是对于<span
+class="math inline">\(\varphi_1\cdots\varphi_{n-1}\)</span>以及<span
+class="math inline">\(x\)</span>的多元函数： <span
+class="math display">\[
+f(\varphi_1,\dots,\varphi_{n-1},x)=0
+\]</span> 现令<span
+class="math inline">\(x=g(\varphi_1,\dots,\varphi_{n-1})\)</span></p>
+<p>现在问题转化为，如何在满足约束<span
+class="math inline">\(f\)</span>的情况下，求得<span
+class="math inline">\(x\)</span>的最大值，由以上推论可知，满足方程：
+<span class="math display">\[
+\begin{cases}
+\frac{\partial g}{\partial \varphi_1}=0\\
+\dots\\
+\frac{\partial g}{\partial \varphi_{n-1}}=0\\
+\end{cases}
+\]</span> 时的<span
+class="math inline">\(\varphi_1\dots\varphi_{n-1}\)</span>即为<span
+class="math inline">\(x\)</span>最大时的取值</p>
+<p>那么： <span class="math display">\[
+\frac{\partial g}{\partial \varphi_t}=-\frac{\frac{\partial f}{\partial
+\varphi_t}}{\frac{\partial g}{\partial x}}=0
+\]</span> 即： <span class="math display">\[
+\displaystyle \frac{1}{K}\cdot \frac{\partial f}{\partial
+\varphi_t}=\\\prod_{i=1,i\neq t}^{n-1}(S\cdot \varphi_i-a_ix)^{a_i}\cdot
+a_t\cdot
+S(S\varphi_t-a_tx)^{a_t-1}\cdot[S-S\sum_{i=1}^{n-1}\varphi_i-a_nx]^{a_n}\\
+-\prod_{i-1}^{n-1}(S\varphi_i-a_ix)^{a_i}\cdot
+Sa_n(S-S\sum_{i=1}^{n-1}\varphi_i-a_nx)^{a_n-1}\\
+=0
+\]</span></p>
+<p>化简得： <span class="math display">\[
+a_t(1-\sum_{i=1}^{n-1}\varphi_i)-\varphi_t a_n=0
+\]</span> 令<span class="math inline">\(\displaystyle
+\varphi_n=1-\sum_{i=1}^{n-1}\varphi_i\)</span>，有： <span
+class="math display">\[
+\frac{\varphi_t}{a_t}=\frac{\varphi_n}{a_n}
+\]</span> 这个式子的意义就是，当投料比等于化学计量数之比时，转化率<span
+class="math inline">\(x\)</span>取得最大值。</p>
 
                 
               </div>
@@ -286,15 +378,6 @@
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/test0/">#test0</a>
-      
-        <a href="/tags/test1/">#test1</a>
-      
-    </div>
-  
 </div>
 
 
@@ -303,14 +386,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>test</div>
-      <div>http://example.com/2022/08/13/example/</div>
+      <div>813</div>
+      <div>http://example.com/2022/08/13/8-13/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>lpr</div>
         </div>
       
       
@@ -346,18 +429,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/13/8-13/" title="813">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">813</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/13/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2022/08/13/example/" title="test">
+                        <span class="hidden-mobile">test</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -411,6 +488,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -577,6 +660,40 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.1/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
