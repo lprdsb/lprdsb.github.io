@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>9.15</title>
+    <link href="/2022/09/15/9-15/"/>
+    <url>/2022/09/15/9-15/</url>
+    
+    <content type="html"><![CDATA[<p>6. <span class="math display">\[\displaylines{    \forall \varepsilon &gt;0,\exists N,\forall n &gt; N,|x_n-a|&lt;\varepsilon\\    |\sqrt{x_n}-\sqrt{a}|=|\frac{x_n-a}{\sqrt{x_n}+\sqrt{a}}|&lt;\frac{\varepsilon}{\sqrt{a}}\\    \Box}\]</span></p><p>7. <span class="math display">\[\displaylines{    A&lt;y_n&lt;B \\    \lim_{n\rightarrow \infty} x_n y_n \leq \lim_{n \rightarrow \infty}Bx_n = 0\\    \Box}\]</span></p><p>8.</p><p>(1). <span class="math display">\[\displaylines{    \lim_{n\rightarrow \infty}1^{\frac{1}{n}} =1 \leq \lim_{n\rightarrow\infty} (\sum_{i=1}^{n}\frac{1}{i})^{\frac{1}{n}} \leq\lim_{n\rightarrow \infty}n^{\frac{1}{n}}=1\\    \Box}\]</span></p><p>(2). <span class="math display">\[\displaylines{    \lim_{n\rightarrow \infty}\frac{n}{n+\sqrt{n}}=1\leq\lim_{n\rightarrow\infty}\sum_{i=1}^n\frac{1}{n+\sqrt{i}}\leq\lim_{n\rightarrow \infty}\frac{n}{n+1}=1 \\    \Box}\]</span></p><p>(3). <span class="math display">\[\displaylines{    \lim_{n\rightarrow \infty} \frac{2n+2}{n+1}=2\leq \lim_{n\rightarrow\infty}\sum_{i=n^2}^{(n+1)^2}\frac{1}{\sqrt{i}}\leq\frac{2n+2}{n}=2\\    \Box}\]</span></p><p>(4). $$</p><p>$$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Daily</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>9.5</title>
     <link href="/2022/09/05/9-5/"/>
     <url>/2022/09/05/9-5/</url>
