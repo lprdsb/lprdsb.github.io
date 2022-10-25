@@ -16,21 +16,21 @@
   <meta name="author" content="lpr">
   <meta name="keywords" content="">
   
-    <meta name="description" content="6. \[ \displaylines{     \forall \varepsilon &gt;0,\exists N,\forall n &gt; N, |x_n-a|&lt;\varepsilon\\     |\sqrt{x_n}-\sqrt{a}|&#x3D;|\frac{x_n-a}{\sqrt{x_n}+\sqrt{a}}|&lt;\frac{\varepsilon}{\sqrt{a}}\\">
+    <meta name="description" content="浅谈泰勒展开 引入 对于比较复杂的函数，需要讨论它的性质，于是希望用一个多项式来拟合这个函数，并给出相应的误差函数。 假设原函数为\(f(x)\)，拟合的函数为\(g(x)\)。 因为是在用多项式拟合，于是令\(g_n(x)\)为一个\(n\)次多项式，即关于\(x\)的最高次项为\(n\)。 另外，为了方便，规定\(0!&#x3D;1，f^{(0)}(x)&#x3D;f(x)\)。即\(0\)的阶乘为\(1\)，\">
 <meta property="og:type" content="article">
-<meta property="og:title" content="9.15">
-<meta property="og:url" content="https://lprdsb.github.io/2022/09/15/9-15/index.html">
+<meta property="og:title" content="Talor">
+<meta property="og:url" content="https://lprdsb.github.io/2022/10/25/Talor/index.html">
 <meta property="og:site_name" content="lpr&#39;s blogs">
-<meta property="og:description" content="6. \[ \displaylines{     \forall \varepsilon &gt;0,\exists N,\forall n &gt; N, |x_n-a|&lt;\varepsilon\\     |\sqrt{x_n}-\sqrt{a}|&#x3D;|\frac{x_n-a}{\sqrt{x_n}+\sqrt{a}}|&lt;\frac{\varepsilon}{\sqrt{a}}\\">
+<meta property="og:description" content="浅谈泰勒展开 引入 对于比较复杂的函数，需要讨论它的性质，于是希望用一个多项式来拟合这个函数，并给出相应的误差函数。 假设原函数为\(f(x)\)，拟合的函数为\(g(x)\)。 因为是在用多项式拟合，于是令\(g_n(x)\)为一个\(n\)次多项式，即关于\(x\)的最高次项为\(n\)。 另外，为了方便，规定\(0!&#x3D;1，f^{(0)}(x)&#x3D;f(x)\)。即\(0\)的阶乘为\(1\)，\">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-15T11:30:09.000Z">
-<meta property="article:modified_time" content="2022-09-15T12:54:12.684Z">
+<meta property="article:published_time" content="2022-10-25T08:55:16.000Z">
+<meta property="article:modified_time" content="2022-10-25T09:46:54.462Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>9.15 - lpr&#39;s blogs</title>
+  <title>Talor - lpr&#39;s blogs</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="9.15"></span>
+            <span id="subtitle" data-typed-text="Talor"></span>
           
         </div>
 
@@ -222,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-15 19:30" pubdate>
-          2022年9月15日 晚上
+        <time datetime="2022-10-25 16:55" pubdate>
+          2022年10月25日 下午
         </time>
       </span>
     
@@ -234,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          834 字
+          2.1k 字
         
       </span>
     
@@ -245,7 +245,7 @@
         
         
         
-          7 分钟
+          18 分钟
         
       </span>
     
@@ -283,54 +283,119 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">9.15</h1>
+            <h1 style="display: none">Talor</h1>
             
             
               <div class="markdown-body">
                 
-                <p>6. <span class="math display">\[
+                <h1 id="浅谈泰勒展开">浅谈泰勒展开</h1>
+<h2 id="引入">引入</h2>
+<p>对于比较复杂的函数，需要讨论它的性质，于是希望用一个多项式来拟合这个函数，并给出相应的误差函数。</p>
+<p>假设原函数为<span
+class="math inline">\(f(x)\)</span>，拟合的函数为<span
+class="math inline">\(g(x)\)</span>。</p>
+<p>因为是在用多项式拟合，于是令<span
+class="math inline">\(g_n(x)\)</span>为一个<span
+class="math inline">\(n\)</span>次多项式，即关于<span
+class="math inline">\(x\)</span>的最高次项为<span
+class="math inline">\(n\)</span>。</p>
+<p>另外，为了方便，规定<span
+class="math inline">\(0!=1，f^{(0)}(x)=f(x)\)</span>。即<span
+class="math inline">\(0\)</span>的阶乘为<span
+class="math inline">\(1\)</span>，<span
+class="math inline">\(f(x)\)</span>的零阶导为其本身。</p>
+<p>一般的，拟合的函数为：</p>
+<p><span class="math display">\[
 \displaylines{
-    \forall \varepsilon &gt;0,\exists N,\forall n &gt; N,
-|x_n-a|&lt;\varepsilon\\
-    |\sqrt{x_n}-\sqrt{a}|=|\frac{x_n-a}{\sqrt{x_n}+\sqrt{a}}|&lt;\frac{\varepsilon}{\sqrt{a}}\\
-    \Box
+    g_n(x)=\frac{f^{(0)}(x_0)}{0!}(x-x_0)^0+\frac{f^{(1)}(x_0)}{1!}(x-x_0)^1\dotsb+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\
+    =\sum_{i=0}^n\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
 }
 \]</span></p>
-<p>7. <span class="math display">\[
+<p>定义其余项为：</p>
+<p><span class="math display">\[
 \displaylines{
-    A&lt;y_n&lt;B \\
-    \lim_{n\rightarrow \infty} x_n y_n \leq \lim_{n \rightarrow \infty}
-Bx_n = 0\\
-    \Box
+    R_n(x)=f(x)-g_n(x)
 }
 \]</span></p>
-<p>8.</p>
-<p>(1). <span class="math display">\[
+<h2 id="拉格朗日余项">拉格朗日余项</h2>
+<p>拉格朗日告诉我们这个式子：</p>
+<p><span class="math display">\[
+R_n(x)=\frac{f^{(n+1)}(x_0)}{(n+1)!}(\varepsilon-x_0)^n, \varepsilon \in
+[x, x_0]or[x_0,x]
+\]</span></p>
+<p>证明：</p>
+<p>考虑<span class="math inline">\(g_n(x)\)</span>的的构成，有：</p>
+<p><span class="math display">\[
 \displaylines{
-    \lim_{n\rightarrow \infty}1^{\frac{1}{n}} =1 \leq \lim_{n\rightarrow
-\infty} (\sum_{i=1}^{n}\frac{1}{i})^{\frac{1}{n}} \leq
-\lim_{n\rightarrow \infty}n^{\frac{1}{n}}=1\\
-    \Box
+    g^{(0)}_n(x_0)=f^{(0)}(x_0)\\
+    g^{(1)}_n(x_0)=f^{(1)}(x_0)\\
+    \dotsb\\
+    g^{(n)}_n(x_0)=f^{(n)}(x_0)
 }
 \]</span></p>
-<p>(2). <span class="math display">\[
+<p>于是：</p>
+<p><span class="math display">\[
 \displaylines{
-    \lim_{n\rightarrow \infty}\frac{n}{n+\sqrt{n}}=1\leq
-\lim_{n\rightarrow
-\infty}\sum_{i=1}^n\frac{1}{n+\sqrt{i}}\leq\lim_{n\rightarrow \infty}
-\frac{n}{n+1}=1 \\
-    \Box
+    R^{(0)}_n(x_0)=0\\
+    R^{(1)}_n(x_0)=0\\
+    \dotsb\\
+    R^{(n)}_n(x_0)=0
 }
 \]</span></p>
-<p>(3). <span class="math display">\[
+<p>另外有：</p>
+<p><span class="math display">\[
+R^{(n+1)}_n(x)=f^{(n+1)}(x)
+\]</span></p>
+<p>这是因为，<span class="math inline">\(g^{(n+1)}_n(x)=0\)</span>。</p>
+<p>现在想知道<span
+class="math inline">\(R_n(x)\)</span>的值，构造函数<span
+class="math inline">\(h_n(x)=(x-x_0)^{n+1}\)</span>，有：</p>
+<p><span class="math display">\[
 \displaylines{
-    \lim_{n\rightarrow \infty} \frac{2n+2}{n+1}=2\leq \lim_{n\rightarrow
-\infty}\sum_{i=n^2}^{(n+1)^2}\frac{1}{\sqrt{i}}\leq\frac{2n+2}{n}=2\\
-    \Box
+    h^{(0)}_n(x_0)=0\\
+    h^{(1)}_n(x_0)=0\\
+    \dotsb\\
+    h^{(n)}_n(x_0)=0\\
+    h^{(n+1)}_n(x_0)=(n+1)!\\
 }
 \]</span></p>
-<p>(4). $$</p>
-<p>$$</p>
+<p>那么</p>
+<p><span class="math display">\[
+\frac{R_n(x)}{h_n(x)}=\frac{R_n(x)-0}{h_n(x)-0}=\frac{R_n(x)-R_n(x_0)}{h_n(x)-h_n(x_0)}
+\]</span></p>
+<p>由柯西中值可得：</p>
+<p><span class="math display">\[
+\frac{R_n(x)}{h_n(x)}=\frac{R^{(1)}_n(\varepsilon_1)}{h^{(1)}_n(\varepsilon_1)},\varepsilon_1\in[x_0,x]
+\]</span></p>
+<p>同样：</p>
+<p><span class="math display">\[
+\frac{R^{(1)}_n(\varepsilon_1)}{h^{(1)}_n(\varepsilon_1)}=\frac{R^{(1)}_n(\varepsilon_1)-0}{h^{(1)}_n(\varepsilon_1)-0}
+=\frac{R^{(1)}_n(\varepsilon_1)-R^{(1)}_n(x_0)}{h^{(1)}_n(\varepsilon_1)-h^{(1)}_n(x_0)}
+=\frac{R^{(2)}_n(\varepsilon_2)}{h^{(2)}_n(\varepsilon_2)},\varepsilon_2\in[x_0,\varepsilon_1]\in[x_0,x]
+\]</span></p>
+<p>那么，运用<span
+class="math inline">\(n+1\)</span>次柯西中值即可得到：</p>
+<p><span class="math display">\[
+\frac{R_n(x)}{h_n(x)}=\frac{R^{(n+1)}_n(\varepsilon_{n+1})}{h^{(n+1)}_n(\varepsilon_{n+1})}=
+\frac{f^{(n+1)}(\varepsilon_{n+1})}{(n+1)!},\varepsilon_{n+1}\in[x_0,\varepsilon_{n}]\in[x_0,x]
+\]</span></p>
+<p>所以： <span class="math display">\[
+R_n(x)=\frac{f^{(n+1)}(\varepsilon_{n+1})}{(n+1)!}h_n(x)=\frac{f^{(n+1)}(\varepsilon_{n+1})}{(n+1)!}(x-x_0)^{n+1},
+\varepsilon_{n+1}\in[x_0,x]
+\]</span></p>
+<p>即为拉格朗日余项。</p>
+<h2 id="皮亚诺余项">皮亚诺余项</h2>
+<p>易知：</p>
+<p><span class="math display">\[
+\lim_{x\rightarrow x_0}\frac{R_n(x)}{(x-x_0)^n}
+=\lim_{x\rightarrow
+x_0}\frac{f^{(n+1)}(\varepsilon_{n+1})}{(n+1)!}(x-x_0)=0
+\]</span></p>
+<p>故：</p>
+<p><span class="math display">\[
+R_n(x)=o((x-x_0)^n)(x\rightarrow x_0)
+\]</span></p>
+<p>即为皮亚诺余项。</p>
 
                 
               </div>
@@ -338,27 +403,6 @@ Bx_n = 0\\
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Daily/" class="category-chain-item">Daily</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -369,8 +413,8 @@ Bx_n = 0\\
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>9.15</div>
-      <div>https://lprdsb.github.io/2022/09/15/9-15/</div>
+      <div>Talor</div>
+      <div>https://lprdsb.github.io/2022/10/25/Talor/</div>
     </div>
     <div class="license-meta">
       
@@ -382,7 +426,7 @@ Bx_n = 0\\
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月15日</div>
+          <div>2022年10月25日</div>
         </div>
       
       
@@ -412,18 +456,12 @@ Bx_n = 0\\
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/25/Talor/" title="Talor">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Talor</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/05/9-5/" title="9.5">
-                        <span class="hidden-mobile">9.5</span>
+                      <a href="/2022/09/15/9-15/" title="9.15">
+                        <span class="hidden-mobile">9.15</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
